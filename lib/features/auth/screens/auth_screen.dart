@@ -52,6 +52,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
               ),
               ListTile(
+                tileColor: _auth == Auth.signup?GlobalVariables.backgroundColor:GlobalVariables.greyBackgroundCOlor,
                 title: Text(
                   'Sign Up',
                   style: TextStyle(
@@ -100,6 +101,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                 ),
               ListTile(
+                tileColor: _auth == Auth.signin?GlobalVariables.backgroundColor:GlobalVariables.greyBackgroundCOlor,
                 title: Text(
                   'Sign In',
                   style: TextStyle(
@@ -119,6 +121,29 @@ class _AuthScreenState extends State<AuthScreen> {
                   },
                 ),
               ),
+              if (_auth == Auth.signin)
+                Container(
+                  padding: EdgeInsets.all(8.0),
+                  color: GlobalVariables.backgroundColor,
+                  child: Form(
+                    key: _signInFormKey,
+                    child: Column(
+                      children: [
+                        CustomTextField(
+                          controller: _emailController,
+                          hintText: 'Email',
+                        ),
+                        SizedBox(height: 10),
+                        CustomTextField(
+                          controller: _passwordController,
+                          hintText: 'Password',
+                        ),
+                        SizedBox(height: 10),
+                        CustomButton(text: 'Sign In', onTap: () {}),
+                      ],
+                    ),
+                  ),
+                ),
             ],
           ),
         ),
