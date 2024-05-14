@@ -11,6 +11,7 @@ const DB = "mongodb+srv://peterthuku706:SgGre3aSHHgUPHpz@cluster0.vwpzrvp.mongod
 const authRouter = require("./routes/auth");
 
 //middleware
+app.use(express.json());
 app.use(authRouter);
 
 // connections
