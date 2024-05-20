@@ -29,6 +29,7 @@ class BelowAppBar extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 22,
                     color: Colors.black,
+                    fontWeight: FontWeight.w600,
                   )
                 )
               ]),

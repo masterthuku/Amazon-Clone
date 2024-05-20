@@ -1,5 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:amazone/constants/global_variables.dart';
 import 'package:amazone/features/account/widgets/below_app_bar.dart';
+import 'package:amazone/features/account/widgets/orders.dart';
+import 'package:amazone/features/account/widgets/top_buttons.dart';
 import 'package:flutter/material.dart';
 
 class AccountScreen extends StatelessWidget {
@@ -48,6 +52,9 @@ class AccountScreen extends StatelessWidget {
         children: const [
           BelowAppBar(),
           SizedBox(height: 10),
+          TopButtons(),
+          SizedBox(height: 20),
+          Orders(),
         ],
       ),
     );
