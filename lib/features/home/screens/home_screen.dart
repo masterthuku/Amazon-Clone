@@ -2,6 +2,8 @@
 
 import 'package:amazone/constants/global_variables.dart';
 import 'package:amazone/features/home/widgets/address_box.dart';
+import 'package:amazone/features/home/widgets/carousel_images.dart';
+import 'package:amazone/features/home/widgets/deal_of_day.dart';
 import 'package:amazone/features/home/widgets/top_categories.dart';
 import 'package:flutter/material.dart';
 
@@ -86,12 +88,17 @@ class _HomeSreenState extends State<HomeSreen> {
           ),
         ),
       ),
-      body: Column(
-        children: const [
-          AddressBox(),
-          SizedBox(height: 10),
-          TopCategories(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            AddressBox(),
+            SizedBox(height: 10),
+            TopCategories(),
+            SizedBox(height: 10),
+            CarouselImage(),
+            DealOfDay(),
+          ],
+        ),
       ),
     );
   }
