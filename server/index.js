@@ -9,10 +9,12 @@ const DB = "mongodb+srv://peterthuku706:SgGre3aSHHgUPHpz@cluster0.vwpzrvp.mongod
 
 //imports from files
 const authRouter = require("./routes/auth");
+const adminRouter = require("./routes/admin");
 
 //middleware
 app.use(express.json());
 app.use(authRouter);
+app.use(adminRouter);
 
 // connections
 mongoose
